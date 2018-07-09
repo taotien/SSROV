@@ -25,13 +25,20 @@ network={
 	scan_ssid=1
 }
 ```
-1. Move the *wpa_supplicant.conf* file to the SD card. ***DO NOT RUN A REPAIR WHEN WINDOWS COMPLAINS***. The correct drive should be named *boot*.
-1. Duplicate *wpa_supplicant.conf* on the SD card. Open it and replace all text with a single space, then rename the file to *ssh*.
-1. Download and install Advanced IP Scanner from [link]. To use this program to find the IP address of the Raspberry Pi:
-	a. Launch program and select the button with **C** (tooltip: `Subnet of class "C" will be scanned`)
-	b. Hit the **Scan** button to begin finding devices on the current network. Find the IP address of the Raspberry Pi in the list.
-	c. Remember this IP address
-1. Download PuTTY from [link].
+5. Move the *wpa_supplicant.conf* file to the SD card. ***DO NOT RUN A REPAIR WHEN WINDOWS COMPLAINS***. The correct drive should be named *boot*.
+1. Duplicate *wpa_supplicant.conf* on the SD card. Open it and replace all text with a single space, then rename the file to *ssh* without any file extensions.
+2. Install SD card into Raspberry Pi and plug it in. Give it a few minutes to boot fully. 
+3. Download and install Advanced IP Scanner from [link]. To use this program to find the IP address of the Raspberry Pi:
+	1. Launch program and select the button with **C** (tooltip: `Subnet of class "C" will be scanned`) 
+	2. Hit the **Scan** button to begin finding devices on the current network. Find the IP address of the Raspberry Pi in the list.
+	3. Remember this IP address
+4. Download PuTTY from [link].
+5. In PuTTY input *pi@IP_ADDRESS*, replacing **IP_ADDRESS** with the IP found in the previous steps to log into the Raspberry Pi console.
+6. Enter `raspberry` for the password.
+7. Copy `sudo raspi-config` and right click to paste, then press enter to run. Use arrow keys to choose menu options, tab to select buttons, and enter to select:
+	1. Go to 
+2. Run `sudo apt update && sudo apt -y upgrade`.
+3. Run `sudo apt install -y`
 
 
 ### From pre-built image:
