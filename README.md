@@ -38,7 +38,7 @@ network={
 7. Copy `sudo raspi-config` and right click to paste, then press enter to run. Use arrow keys to choose menu options, tab to select buttons, and enter to select:
 	1. Go to 
 2. Run `sudo apt update && sudo apt -y upgrade`.
-3. Run `sudo apt install -y`
+3. Run `sudo apt install -y git `
 
 
 ### From pre-built image:
