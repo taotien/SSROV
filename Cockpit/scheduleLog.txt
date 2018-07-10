@@ -1,0 +1,209 @@
+{2018/07/09 22:07:25} RaspiMJPEG Version 5.8.10
+{2018/07/09 22:07:25} recommended video buffer size 65536
+{2018/07/09 22:07:25} h264 size set to 131072
+{2018/07/09 22:07:25} recommended video buffers 1
+{2018/07/09 22:07:25} h264 buffers set to recommended 1
+{2018/07/09 22:07:25} Opening FIFO 0 /var/www/cam/FIFO 6
+{2018/07/09 22:07:25} Opening FIFO 1 /var/www/cam/FIFO11 7
+{2018/07/09 22:07:25} MJPEG streaming, ready to receive commands
+{2018/07/09 22:07:25} send smd 9
+[2018/07/09 22:07:27] RaspiCam support started
+[2018/07/09 22:07:27] Capture Pipe already exists /var/www/cam/FIFO1
+{2018/07/09 22:07:27} Starting command loop
+[2018/07/09 22:07:27] Scheduler loop is started
+[2018/07/09 22:07:27] Reload parameters command requested
+[2018/07/09 22:07:27] Scheduler loop is started
+[2018/07/09 22:07:28] New period detected 0
+[2018/07/09 22:07:28] Scheduled management tasks. Next at 1531177648
+[2018/07/09 22:10:36] Logged in user::
+[2018/07/09 22:10:36] UserLevel 6
+[2018/07/09 22:10:48] Logged in user::
+[2018/07/09 22:10:48] UserLevel 6
+{2018/07/09 22:11:24} Change: video_width = 1920
+{2018/07/09 22:11:24} Change: video_height = 1080
+{2018/07/09 22:11:24} Change: video_fps = 25
+{2018/07/09 22:11:24} Change: MP4Box_fps = 25
+{2018/07/09 22:11:24} Change: image_width = 2592
+{2018/07/09 22:11:24} Change: image_height = 1944
+{2018/07/09 22:11:24} recommended video buffer size 65536
+{2018/07/09 22:11:24} h264 size set to 131072
+{2018/07/09 22:11:24} recommended video buffers 1
+{2018/07/09 22:11:24} h264 buffers set to recommended 1
+[2018/07/09 22:11:44] Logged in user::
+[2018/07/09 22:11:44] UserLevel 6
+[2018/07/09 22:11:50] Logged in user::
+[2018/07/09 22:11:50] UserLevel 6
+[2018/07/09 22:11:51] Logged in user::
+[2018/07/09 22:11:51] UserLevel 6
+[2018/07/09 22:11:57] Logged in user::
+[2018/07/09 22:11:57] UserLevel 6
+{2018/07/09 22:15:18} Change: quality = 90
+{2018/07/09 22:15:18} Change: width = 512
+{2018/07/09 22:15:18} Change: divider = 1
+{2018/07/09 22:15:18} recommended video buffer size 65536
+{2018/07/09 22:15:18} h264 size set to 131072
+{2018/07/09 22:15:18} recommended video buffers 1
+{2018/07/09 22:15:18} h264 buffers set to recommended 1
+{2018/07/09 22:15:37} Change: quality = 100
+{2018/07/09 22:15:37} Change: width = 1024
+{2018/07/09 22:15:37} Change: divider = 16
+{2018/07/09 22:15:37} recommended video buffer size 65536
+{2018/07/09 22:15:37} h264 size set to 131072
+{2018/07/09 22:15:37} recommended video buffers 1
+{2018/07/09 22:15:37} h264 buffers set to recommended 1
+{2018/07/09 22:15:51} Change: quality = 50
+{2018/07/09 22:15:51} Change: width = 1024
+{2018/07/09 22:15:51} Change: divider = 1
+{2018/07/09 22:15:51} recommended video buffer size 65536
+{2018/07/09 22:15:51} h264 size set to 131072
+{2018/07/09 22:15:51} recommended video buffers 1
+{2018/07/09 22:15:51} h264 buffers set to recommended 1
+{2018/07/09 22:16:01} Watchdog detected problem. Stopping{2018/07/09 22:16:01} SIGINT/SIGTERM received, stopping
+{2018/07/09 22:16:06} RaspiMJPEG Version 5.8.10
+{2018/07/09 22:16:07} recommended video buffer size 65536
+{2018/07/09 22:16:07} h264 size set to 131072
+{2018/07/09 22:16:07} recommended video buffers 1
+{2018/07/09 22:16:07} h264 buffers set to recommended 1
+{2018/07/09 22:16:07} Opening FIFO 0 /var/www/cam/FIFO 8
+{2018/07/09 22:16:07} Opening FIFO 1 /var/www/cam/FIFO11 9
+{2018/07/09 22:16:07} MJPEG streaming, ready to receive commands
+{2018/07/09 22:16:07} send smd 9
+{2018/07/09 22:16:07} Starting command loop
+[2018/07/09 22:16:07] Reload parameters command requested
+[2018/07/09 22:16:07] Scheduler loop is started
+[2018/07/09 22:16:07] Logged in user::
+[2018/07/09 22:16:07] UserLevel 6
+[2018/07/09 22:16:08] New period detected 0
+[2018/07/09 22:16:08] Scheduled management tasks. Next at 1531178168
+{2018/07/09 22:16:39} Change: quality = 75
+{2018/07/09 22:16:39} Change: width = 512
+{2018/07/09 22:16:39} Change: divider = 1
+{2018/07/09 22:16:39} recommended video buffer size 65536
+{2018/07/09 22:16:39} h264 size set to 131072
+{2018/07/09 22:16:39} recommended video buffers 1
+{2018/07/09 22:16:39} h264 buffers set to recommended 1
+{2018/07/09 22:16:55} Change: quality = 50
+{2018/07/09 22:16:55} Change: width = 512
+{2018/07/09 22:16:55} Change: divider = 1
+{2018/07/09 22:16:55} recommended video buffer size 65536
+{2018/07/09 22:16:55} h264 size set to 131072
+{2018/07/09 22:16:55} recommended video buffers 1
+{2018/07/09 22:16:55} h264 buffers set to recommended 1
+[2018/07/09 22:19:50] Logged in user::
+[2018/07/09 22:19:50] UserLevel 6
+[2018/07/09 22:19:55] Logged in user::
+[2018/07/09 22:19:55] UserLevel 6
+[2018/07/09 22:20:39] Logged in user::
+[2018/07/09 22:20:39] UserLevel 6
+{2018/07/09 22:21:41} Change: quality = 50
+{2018/07/09 22:21:41} Change: width = 512
+{2018/07/09 22:21:41} Change: divider = 2
+{2018/07/09 22:21:41} recommended video buffer size 65536
+{2018/07/09 22:21:41} h264 size set to 131072
+{2018/07/09 22:21:41} recommended video buffers 1
+{2018/07/09 22:21:41} h264 buffers set to recommended 1
+{2018/07/09 22:21:57} Change: quality = 20
+{2018/07/09 22:21:57} Change: width = 512
+{2018/07/09 22:21:57} Change: divider = 2
+{2018/07/09 22:21:57} recommended video buffer size 65536
+{2018/07/09 22:21:57} h264 size set to 131072
+{2018/07/09 22:21:57} recommended video buffers 1
+{2018/07/09 22:21:57} h264 buffers set to recommended 1
+{2018/07/09 22:22:02} Change: quality = 20
+{2018/07/09 22:22:02} Change: width = 1024
+{2018/07/09 22:22:02} Change: divider = 2
+{2018/07/09 22:22:02} recommended video buffer size 65536
+{2018/07/09 22:22:02} h264 size set to 131072
+{2018/07/09 22:22:02} recommended video buffers 1
+{2018/07/09 22:22:02} h264 buffers set to recommended 1
+{2018/07/09 22:22:18} Change: video_width = 1920
+{2018/07/09 22:22:18} Change: video_height = 1080
+{2018/07/09 22:22:18} Change: video_fps = 25
+{2018/07/09 22:22:18} Change: MP4Box_fps = 25
+{2018/07/09 22:22:18} Change: image_width = 2592
+{2018/07/09 22:22:18} Change: image_height = 1944
+{2018/07/09 22:22:18} recommended video buffer size 65536
+{2018/07/09 22:22:18} h264 size set to 131072
+{2018/07/09 22:22:18} recommended video buffers 1
+{2018/07/09 22:22:18} h264 buffers set to recommended 1
+{2018/07/09 22:22:19} Change: video_width = 1920
+{2018/07/09 22:22:19} Change: video_height = 1080
+{2018/07/09 22:22:19} Change: video_fps = 25
+{2018/07/09 22:22:19} Change: MP4Box_fps = 25
+{2018/07/09 22:22:19} Change: image_width = 2592
+{2018/07/09 22:22:19} Change: image_height = 1944
+{2018/07/09 22:22:19} recommended video buffer size 65536
+{2018/07/09 22:22:19} h264 size set to 131072
+{2018/07/09 22:22:19} recommended video buffers 1
+{2018/07/09 22:22:19} h264 buffers set to recommended 1
+{2018/07/09 22:24:06} Change: quality = 20
+{2018/07/09 22:24:06} Change: width = 1024
+{2018/07/09 22:24:06} Change: divider = 0.5
+{2018/07/09 22:24:06} recommended video buffer size 65536
+{2018/07/09 22:24:06} h264 size set to 131072
+{2018/07/09 22:24:06} recommended video buffers 1
+{2018/07/09 22:24:06} h264 buffers set to recommended 1
+{2018/07/09 22:24:17} Watchdog detected problem. Stopping{2018/07/09 22:24:17} SIGINT/SIGTERM received, stopping
+[2018/07/09 22:24:19] Logged in user::
+[2018/07/09 22:24:19] UserLevel 6
+{2018/07/09 22:24:22} RaspiMJPEG Version 5.8.10
+{2018/07/09 22:24:22} recommended video buffer size 65536
+{2018/07/09 22:24:22} h264 size set to 131072
+{2018/07/09 22:24:22} recommended video buffers 1
+{2018/07/09 22:24:22} h264 buffers set to recommended 1
+{2018/07/09 22:24:22} Opening FIFO 0 /var/www/cam/FIFO 7
+{2018/07/09 22:24:22} Opening FIFO 1 /var/www/cam/FIFO11 8
+{2018/07/09 22:24:22} MJPEG streaming, ready to receive commands
+{2018/07/09 22:24:22} send smd 9
+{2018/07/09 22:24:22} Starting command loop
+[2018/07/09 22:24:22] Reload parameters command requested
+[2018/07/09 22:24:22] Scheduler loop is started
+[2018/07/09 22:24:23] New period detected 0
+[2018/07/09 22:24:23] Scheduled management tasks. Next at 1531178663
+{2018/07/09 22:24:29} Change: quality = 20
+{2018/07/09 22:24:29} Change: width = 1024
+{2018/07/09 22:24:29} Change: divider = 01
+{2018/07/09 22:24:29} recommended video buffer size 65536
+{2018/07/09 22:24:29} h264 size set to 131072
+{2018/07/09 22:24:29} recommended video buffers 1
+{2018/07/09 22:24:29} h264 buffers set to recommended 1
+{2018/07/09 22:24:31} Change: quality = 20
+{2018/07/09 22:24:31} Change: width = 1024
+{2018/07/09 22:24:31} Change: divider = 1
+{2018/07/09 22:24:32} recommended video buffer size 65536
+{2018/07/09 22:24:32} h264 size set to 131072
+{2018/07/09 22:24:32} recommended video buffers 1
+{2018/07/09 22:24:32} h264 buffers set to recommended 1
+{2018/07/09 22:24:36} Watchdog detected problem. Stopping[2018/07/09 22:24:36] Logged in user::
+[2018/07/09 22:24:36] UserLevel 6
+{2018/07/09 22:24:36} SIGINT/SIGTERM received, stopping
+{2018/07/09 22:24:41} RaspiMJPEG Version 5.8.10
+{2018/07/09 22:24:41} recommended video buffer size 65536
+{2018/07/09 22:24:41} h264 size set to 131072
+{2018/07/09 22:24:41} recommended video buffers 1
+{2018/07/09 22:24:41} h264 buffers set to recommended 1
+{2018/07/09 22:24:41} Opening FIFO 0 /var/www/cam/FIFO 7
+{2018/07/09 22:24:41} Opening FIFO 1 /var/www/cam/FIFO11 8
+{2018/07/09 22:24:41} MJPEG streaming, ready to receive commands
+{2018/07/09 22:24:41} send smd 9
+{2018/07/09 22:24:41} Starting command loop
+[2018/07/09 22:24:41] Reload parameters command requested
+[2018/07/09 22:24:41] Scheduler loop is started
+[2018/07/09 22:24:42] New period detected 0
+[2018/07/09 22:24:42] Scheduled management tasks. Next at 1531178682
+{2018/07/09 22:25:23} Stream halted
+{2018/07/09 22:26:23} recommended video buffer size 65536
+{2018/07/09 22:26:23} h264 size set to 131072
+{2018/07/09 22:26:23} recommended video buffers 1
+{2018/07/09 22:26:23} h264 buffers set to recommended 1
+{2018/07/09 22:26:23} Stream continued
+{2018/07/09 22:27:13} Stream halted
+[2018/07/09 22:44:13] Logged in user::
+[2018/07/09 22:44:13] UserLevel 6
+[2018/07/09 22:47:15] Logged in user::
+[2018/07/09 22:47:15] UserLevel 6
+{2018/07/09 22:47:18} recommended video buffer size 65536
+{2018/07/09 22:47:18} h264 size set to 131072
+{2018/07/09 22:47:18} recommended video buffers 1
+{2018/07/09 22:47:18} h264 buffers set to recommended 1
+{2018/07/09 22:47:18} Stream continued
