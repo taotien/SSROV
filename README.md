@@ -8,7 +8,7 @@ WARNING: This is a work-in progress!
 
 ## Steps to setup software:
 
-### From scratch:
+### Build from scratch:
 1. Download latest Raspian image from Raspberry Pi's site (don't get NOOBs).
 1. Burn the image to SD card using [Etcher] or [Win32DiskImager].
 1. Create a file *wpa_supplicant.conf* (ignore filetype change warning). You can edit this file with Notepad.
@@ -42,6 +42,12 @@ network={
 
 
 ### From pre-built image:
+1. Grab the latset image from [link].
+2. Use [Etcher] to burn the image to an sd card.
+3. Open *wpa_supplicant.conf* on the image and configure your network settings. See step 4 from the "Build from Scratch" section.
+4. Save the file, and eject the SD card.
+5. Insert the SD card into the Raspberry Pi
+
 
 ## Steps to setup hardware:
 1. 
