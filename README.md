@@ -40,6 +40,14 @@ network={
 2. Run `sudo apt update && sudo apt -y upgrade`.
 3. Run `sudo apt install -y git `
 
+<!-- 
+Install Rpi Cam Web Interface
+Install wiringpi
+Install pip
+Install sensors
+Setup configs (bitbangin)
+
+ -->
 
 ### From pre-built image:
 1. Grab the latset image from [link].
