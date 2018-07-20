@@ -37,8 +37,9 @@ network={
 6. Enter `raspberry` for the password.
 7. Copy `sudo raspi-config` and right click to paste, then press enter to run. Use arrow keys to choose menu options, tab to select buttons, and enter to select:
 	1. Go to 
-2. Run `sudo apt update && sudo apt -y upgrade`.
-3. Run `sudo apt install -y git `
+2. Run `sudo apt update && sudo apt -y upgrade && sudo apt -y dist-upgrade && sudo rpi-update`
+3. Reboot the Pi by typing `sudo reboot`.
+4. Run `sudo apt install -y git ` after reconnecting using PuTTY.
 
 <!-- 
 Install Rpi Cam Web Interface
