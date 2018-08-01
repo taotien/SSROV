@@ -1,6 +1,7 @@
 # SSROV
 The code repository for all things needed to create an internet-controllable ROV. 
 WARNING: This is a work-in progress!
+TODO: EXCEL BUDGET AND INVENTORY
 
 ## Dependancies:
 
@@ -9,10 +10,10 @@ WARNING: This is a work-in progress!
 ## Steps to setup software:
 
 ### Build from scratch:
-1. Download latest Raspian image from Raspberry Pi's site (don't get NOOBs).
-1. Burn the image to SD card using [Etcher] or [Win32DiskImager].
-1. Create a file *wpa_supplicant.conf* (ignore filetype change warning). You can edit this file with Notepad.
-1. Paste the following into the file, substituting **WIFI NAME** and **WIFI PASS** for the network you're using. 
+1. Download latest Raspian image from Raspberry Pi's site [https://www.raspberrypi.org/downloads/raspbian/].
+2. Burn the image to SD card using [Etcher] or [Win32DiskImager].
+3. Create a file *wpa_supplicant.conf* (ignore filetype change warning). You can edit this file with Notepad.
+4. Paste the following into the file, substituting **WIFI NAME** and **WIFI PASS** for the network you're using. 
 (NOTE: only works with networks that don't require logging in, and be the same network as the computer):
 ```javascript
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
@@ -39,7 +40,7 @@ network={
 	1. Go to 
 2. Run `sudo apt update && sudo apt -y upgrade && sudo apt -y dist-upgrade && sudo rpi-update`
 3. Reboot the Pi by typing `sudo reboot`.
-4. Run `sudo apt install -y git ` after reconnecting using PuTTY.
+4. Run `sudo apt install -y git python-smbus ` after reconnecting using PuTTY.
 
 <!-- 
 Install Rpi Cam Web Interface
@@ -47,7 +48,9 @@ Install wiringpi
 Install pip
 Install sensors
 Setup configs (bitbangin)
-
+git clone https://github.com/johnweber/Adafruit_Python_BNO055
+git clone https://github.com/bluerobotics/ms5837-python.git
+git clone git://git.drogon.net/wiringPi
  -->
 
 ### From pre-built image:
