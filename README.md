@@ -12,9 +12,10 @@ TODO:
 4. Modify pressure sensor to use I2C-3
 5. Make sure wiringPi doesn't interfere with I2C hacks
 6. Purchase and test ethernet add-on board or USB through the GPIO. 
-7. Package and tutorial around ethernet gadget mode (for Pi0 only)
-8. List of apt packages required
-9. Screenshots for everything
+7. Setup a full working hardware prototype (so the pins can be tested for conflicts)
+8. Package and tutorial around ethernet gadget mode (for Pi0 only)
+9. List of apt packages required
+10. Screenshots for everything
 
 ## Introduction
 The internet ROV is powered by the budget Raspberry Pi Zero and common off-the-shelf components found that is built around the Raspberry Pi platform as well as basic programming. The goal of this project is to enable a remote user to access a ROV without being on the docks.
@@ -22,7 +23,7 @@ The internet ROV is powered by the budget Raspberry Pi Zero and common off-the-s
 The remote user connects to a proxy server (a workaround to port-forwarding restrictions) that forwards all connections to the ROV server, which is onboard the ROV itself. All calculations are excecuted on the ROV itself. The user can see a live image of the ROV, an overlay of various data, and control using onscreen buttons or a keyboard. The onsite operator should be able to simply connect the ROV to a laptop and power source, connect to the internet, and run a script which handles all the initialisation of software, such that no configuration or programming is needed. 
 
 ### Hardware:
-- Raspberry Pi Zero (Rasberry Pi Zero W preferred, soldered headers optional)
+- Raspberry Pi Zero (or Raspberry Pi Zero W, soldered headers optional)
 - 1x SD card for Raspberry Pi OS and software storage
 - 4x [Motor control boards]
 - 1x [Raspberry Pi Camera]
@@ -30,6 +31,19 @@ The remote user connects to a proxy server (a workaround to port-forwarding rest
 - 1x [Salinity sensor]
 - 1x Portable computer for configuration and tethering
 - 1x Mobile hotspot
+
+| Item                                            | Link                                                                                        | Quantity | Price/Unit |
+| ----------------------------------------------- | ------------------------------------------------------------------------------------------- | -------- | ---------- |
+| Raspberry Pi Zero W                             | https://www.adafruit.com/product/3400                                                       | 1        | $10.00     |
+| Raspberry Pi Zero                               | https://www.adafruit.com/product/2885                                                       | 1        | $5.00      |
+| NOTE: Most sites only allow 1 RPi per purchase  | Alternate links: https://www.raspberrypi.org/products/                                      |
+| 2x20 Breakaway Header Strip                     | https://www.adafruit.com/product/2822                                                       | 1        | $0.95      |
+| 8GB SD Card                                     | https://www.adafruit.com/product/1294                                                       | 1        | $9.95      |
+| Adafruit DRV8871 DC Motor Driver Breakout Board | https://www.adafruit.com/product/3190                                                       | 4        | $7.50      |
+| Zero Spy Camera for Raspberry Pi Zero           | https://www.adafruit.com/product/3508                                                       | 1        | $19.95     |
+| OpenROV IMU/Compass/Depth Module                | https://store.openrov.com/products/openrov-imu-depth-module                                 | 1        | $120.00    |
+| Water level or salinity sensor module           | http://www.elechouse.com/elechouse/index.php?main_page=product_info&cPath=&products_id=2233 | 1        | $4.99      |
+
 
 ### Software:
 - Latest Raspbian image
@@ -136,7 +150,11 @@ sudo python setup.py install
 		3. `gpio unexportall` to finish testing.
 3. Test the BNO055 sensor:
 	1. `cd ~/Adafruit_Python_BNO055/examples`
-	2. `python simpletest.py`
+	2. `python simpletest.py` This should show a live steam of data about the sensor. Move the sensor module around to see if it's working.
+	3. Press CTRL+C to quit the program.
+4. Test the ms5837 sensor:
+	1. `cd ~/ms5837-python`
+	2. `python example.py`
 
 
 ### Configuring the server:
@@ -156,4 +174,3 @@ sudo /etc/init.d/lighttpd start
 
 
 ## Steps to setup hardware:
-1. 
