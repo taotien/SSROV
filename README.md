@@ -9,10 +9,12 @@ TODO:
 		2. Graphical rather than text overlay for data
 		3. Options page to set streaming parameters in case badwidth isn't enough
 3. Develop salinity sensor module
-4. Purchase and test ethernet add-on board or USB through the GPIO. 
-5. Package and tutorial around ethernet gadget mode (for Pi0 only)
-6. List of apt packages required
-7. Screenshots for everything
+4. Modify pressure sensor to use I2C-3
+5. Make sure wiringPi doesn't interfere with I2C hacks
+6. Purchase and test ethernet add-on board or USB through the GPIO. 
+7. Package and tutorial around ethernet gadget mode (for Pi0 only)
+8. List of apt packages required
+9. Screenshots for everything
 
 ## Introduction
 The internet ROV is powered by the budget Raspberry Pi Zero and common off-the-shelf components found that is built around the Raspberry Pi platform as well as basic programming. The goal of this project is to enable a remote user to access a ROV without being on the docks.
@@ -97,7 +99,7 @@ cd ~/RPi_Cam_Web_Interface
 ./install.sh
 ```
 14. A configuration will pop up. User arrow keys to choose menu options, tab to select buttons, and enter to select:
-	1. Under [folder] delete everything.
+	1. Under [folder] type `cam`.
 	2. Under [server] delete `apache` and type [`lighttpd`] 
 	3. Under autostart type [boi].
 	4. Press enter to save everything and finish installation.
@@ -108,27 +110,48 @@ cd ~/wiringPi
 git pull origin
 ./build
 ```
-16. Install BNO055 sensor:
+16. Setup I2C over GPIO
+	1.  `sudo nano /boot/config.txt`
+	2.  Use arrow keys to navigate to the very bottom and add the line `dtoverlay=i2c-gpio,i2c_gpio_sda=<pin>,i2c_gpio_scl=<pin>`. Edit the two `<pin>` numbers to the correct SDA and SCL pins used. It should be [###] and [###] accoding to the diagram.
+	1.  Press CTRL+X to begin saving the file, press Y to accept the filename, and press ENTER to exit nano. 
+	2.  `sudo reboot` to reboot the Raspberry Pi.
+	3.  `modprobe i2c-dev` to finish the setup.
+17. Install BNO055 sensor:
 ```bash
 cd ~/Adafruit_Python_BNO055
 sudo python setup.py install
 ```
+### Testing all the modules:
+1. Test the camera:
+	1. `cd ~/RPi_Cam_Web_Interface`
+	2. `./start.sh` to turn on the camera.
+	3. On your computer, open a browser and type `http://[raspberrypi ip address]/cam/min.php`
+	4. There should be a live feed. 
+	5. `./stop.sh` to turn off the camera.
+2. Test wiringPi:
+	1. `gpio readall` will print a diagram of all the pins on the Raspberry Pi.
+	2. If motor is connected:
+		1. `gpio mode <pin> out` once for each data pin of the motors being tested.
+		2. `gpio write <pin> 1` will enable the motor to turn. Run `gpio write <pin> 0` to turn off motor.
+		3. `gpio unexportall` to finish testing.
+3. Test the BNO055 sensor:
+	1. `cd ~/Adafruit_Python_BNO055/examples`
+	2. `python simpletest.py`
 
 
+### Configuring the server:
 
-<!-- 
-Install Rpi Cam Web Interface
-Install wiringpi
-git clone git://git.drogon.net/wiringPi
-Install pip
-Install sensors
-Setup configs (bitbangin), i2c hax
-git clone https://github.com/johnweber/Adafruit_Python_BNO055
-git clone https://github.com/bluerobotics/ms5837-python.git
+
+<!--
 Test everything after install
 Edit configs for lhttpd to enable mod-cgi
 Make files for the cockpit
- -->
+sudo lighttpd-enable-mod cgi
+sudo lighttpd-enable-mod fastcgi
+sudo nano /etc/lighttpd/lighttpd.conf
+sudo /etc/init.d/lighttpd stop
+sudo /etc/init.d/lighttpd start
+-->
 
 
 
