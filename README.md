@@ -83,7 +83,7 @@ network={
 10. Reboot the Pi by typing `sudo reboot`.
 
 ### Installing dependencies:
-11. Run `sudo apt install -y git python-smbus python-pip`
+11. Run `sudo apt install -y git python-smbus python-pip build-essential python-dev`
 12. Run:
 ```bash
 git clone https://github.com/silvanmelchior/RPi_Cam_Web_Interface.git #Software bundle to easily use the Raspberry Pi camera module
@@ -101,7 +101,19 @@ cd ~/RPi_Cam_Web_Interface
 	2. Under [server] delete `apache` and type [`lighttpd`] 
 	3. Under autostart type [boi].
 	4. Press enter to save everything and finish installation.
-	5. Select no as we don't need to start the camera just yet.
+	5. Select [no] as we don't need to start the camera just yet.
+15. Install wiringPi:
+```bash
+cd ~/wiringPi
+git pull origin
+./build
+```
+16. Install BNO055 sensor:
+```bash
+cd ~/Adafruit_Python_BNO055
+sudo python setup.py install
+```
+
 
 
 <!-- 
@@ -113,10 +125,9 @@ Install sensors
 Setup configs (bitbangin), i2c hax
 git clone https://github.com/johnweber/Adafruit_Python_BNO055
 git clone https://github.com/bluerobotics/ms5837-python.git
+Test everything after install
 Edit configs for lhttpd to enable mod-cgi
 Make files for the cockpit
-Add pipe for the overlay
-
  -->
 
 
