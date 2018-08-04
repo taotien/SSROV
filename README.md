@@ -25,10 +25,10 @@ The remote user connects to a proxy server (a workaround to port-forwarding rest
 ### Hardware:
 - Raspberry Pi Zero (or Raspberry Pi Zero W, soldered headers optional)
 - 1x SD card for Raspberry Pi OS and software storage
-- 4x [Motor control boards]
-- 1x [Raspberry Pi Camera]
-- 1x [OpenROV combo sensor]: Adds compass heading, orientation, pressure, and temperature data retrieval
-- 1x [Salinity sensor]
+- 4x Motor control boards
+- 1x Raspberry Pi Camera
+- 1x OpenROV combo sensor: Adds compass heading, orientation, pressure, and temperature data retrieval
+- 1x Salinity sensor
 - 1x Portable computer for configuration and tethering
 - 1x Mobile hotspot
 
@@ -43,7 +43,7 @@ The remote user connects to a proxy server (a workaround to port-forwarding rest
 | Zero Spy Camera for Raspberry Pi Zero           | https://www.adafruit.com/product/3508                                                       | 1        | $19.95     |
 | OpenROV IMU/Compass/Depth Module                | https://store.openrov.com/products/openrov-imu-depth-module                                 | 1        | $120.00    |
 | Water level or salinity sensor module           | http://www.elechouse.com/elechouse/index.php?main_page=product_info&cPath=&products_id=2233 | 1        | $4.99      |
-
+|                                                 |                                                                                             | Total    | $168.34    |
 
 ### Software:
 - Latest Raspbian image
@@ -142,7 +142,7 @@ sudo python setup.py install
 	3. On your computer, open a browser and type `http://[raspberrypi ip address]/cam/min.php`
 	4. There should be a live feed. 
 	5. `./stop.sh` to turn off the camera.
-2. Test wiringPi:
+2. Test wiringPi (motors):
 	1. `gpio readall` will print a diagram of all the pins on the Raspberry Pi.
 	2. If motor is connected:
 		1. `gpio mode <pin> out` once for each data pin of the motors being tested.
@@ -158,17 +158,19 @@ sudo python setup.py install
 
 
 ### Configuring the server:
-
+WIP Steps:
+1. Create index.php in /var/www
+2. `sudo lighttpd-enable-mod cgi`
+3. `sudo lighttpd-enable-mod fastcgi`
+4. `sudo nano /etc/lighttpd/lighttpd.conf`
+	1. Change the line `server.documet-root="/var/www/html"` to read `"server.document-root="/var/www/"`.
+	2. In `server.modules = ()` add `"mod_cgi",`.
+5. `sudo /etc/init.d/lighttpd stop`
+6. `sudo /etc/init.d/lighttpd start`
+7. 
 
 <!--
-Test everything after install
-Edit configs for lhttpd to enable mod-cgi
-Make files for the cockpit
-sudo lighttpd-enable-mod cgi
-sudo lighttpd-enable-mod fastcgi
-sudo nano /etc/lighttpd/lighttpd.conf
-sudo /etc/init.d/lighttpd stop
-sudo /etc/init.d/lighttpd start
+ssh tunnel
 -->
 
 
