@@ -60,15 +60,17 @@ The remote user connects to a proxy server (a workaround to port-forwarding rest
 5. Insert the SD card into the Raspberry Pi.
 6. Power on laptop and connect to mobile hotspot.
 7. Connect Raspberry Pi to power source and laptop.
-8. Run [initialization script]
+8. Run [init scripts]
 
 # Build from scratch:
 
 ### Preparing the image:
 1. Download latest Raspian image from Raspberry Pi's site [https://www.raspberrypi.org/downloads/raspbian/].
-7. Burn the image to SD card using [Etcher] or [Win32DiskImager].
+7. Burn the image to SD card using Etcher [https://etcher.io/] or Win32DiskImager[https://sourceforge.net/projects/win32diskimager/].
+	1. Steps:
+1. Skip steps [#] to setup internet over USB instead.
 8. Create a file *wpa_supplicant.conf* (ignore filetype change warning). You can edit this file with Notepad.
-9. Paste the following into the file, substituting **WIFI NAME** and **WIFI PASS** for the network you're using. (NOTE: only works with networks that don't require logging in, and be on the same network as the computer):
+9. Paste the following into the file, substituting **WIFI NAME** and **WIFI PASS** for the network you're using. (NOTE: only works with networks that don't require logging in, and be on the same network as the computer. Make sure your uppercase and lowercases, as well as punctuation is correct):
 
 ```javascript
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
@@ -84,19 +86,21 @@ network={
 
 5. Move the *wpa_supplicant.conf* file to the SD card. ***DO NOT RUN A REPAIR WHEN WINDOWS COMPLAINS***. The correct drive should be named *boot*.
 2. Duplicate *wpa_supplicant.conf* on the SD card. Open it and replace all text with a single space, then rename the file to *ssh* without any file extensions.
-3. Install SD card into Raspberry Pi and plug it in. Give it a few minutes to boot fully. 
-4. Download and install Advanced IP Scanner from [link]. To use this program to find the IP address of the Raspberry Pi:
+3. To setup and connect the Raspberry Pi Zero to the internet over USB:
+	1. https://learn.adafruit.com/turning-your-raspberry-pi-zero-into-a-usb-gadget/ethernet-gadget [expand]
+4. Install SD card into Raspberry Pi and plug it in. Give it a few minutes to boot fully. 
+5. Download and install Advanced IP Scanner from [https://www.advanced-ip-scanner.com/]. To use this program to find the IP address of the Raspberry Pi:
 	1. Launch program and select the button with **C** (tooltip: `Subnet of class "C" will be scanned`) 
 	2. Hit the **Scan** button to begin finding devices on the current network. Find the IP address of the Raspberry Pi in the list.
 	3. Remember this IP address
-5. Download PuTTY from [link].
-6. In PuTTY input *pi@IP_ADDRESS*, replacing **IP_ADDRESS** with the IP found in the previous steps to log into the Raspberry Pi console.
-7. Enter `raspberry` for the password.
-8. Copy `sudo raspi-config` and right click to paste, then press enter to run. Use arrow keys to choose menu options, tab to select buttons, and enter to select:
+6. Download PuTTY from [link].
+7. In PuTTY input *pi@IP_ADDRESS*, replacing **IP_ADDRESS** with the IP found in the previous steps to log into the Raspberry Pi console.
+8. Enter `raspberry` for the password.
+9. Copy `sudo raspi-config` and right click to paste, then press enter to run. Use arrow keys to choose menu options, tab to select buttons, and enter to select:
 	1. Go to [Interfacing]
 	2. Enable Camera, I2C, SSH
-9.  Run `sudo apt update && sudo apt -y upgrade && sudo apt -y dist-upgrade && sudo rpi-update`
-10. Reboot the Pi by typing `sudo reboot`.
+10. Run `sudo apt update && sudo apt -y upgrade && sudo apt -y dist-upgrade && sudo rpi-update`
+11. Reboot the Pi by typing `sudo reboot`.
 
 ### Installing dependencies:
 11. Run `sudo apt install -y git python-smbus python-pip build-essential python-dev`
