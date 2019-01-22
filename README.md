@@ -119,7 +119,7 @@ cd ~/RPi_Cam_Web_Interface
 14. A configuration will pop up. User arrow keys to choose menu options, tab to select buttons, and enter to select:
 	1. Under [folder] type `cam`.
 	2. Under [server] delete `apache` and type [`lighttpd`] 
-	3. Under autostart type [boi].
+	3. Under autostart type [no].
 	4. Press enter to save everything and finish installation.
 	5. Select [no] as we don't need to start the camera just yet.
 15. Install wiringPi:
